@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enack Academy — Plateforme d'apprentissage interactif de la physique moderne. Mécanique, Thermodynamique, Électricité, Optique et Physique Quantique.">
+  <meta name="theme-color" content="#0c1125">
+  <title>Enack Academy — Apprendre la Physique Autrement</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <div class="navbar__logo-icon">⚛️</div>
+        <div class="navbar__logo-text">Enack <span>Academy</span></div>
+      </a>
+
+      <div class="navbar__links" id="nav-links">
+        <a href="index.html" class="navbar__link navbar__link--active">Accueil</a>
+        <a href="cours.html" class="navbar__link">Cours</a>
+        <a href="#domaines" class="navbar__link">Domaines</a>
+        <a href="#faq" class="navbar__link">FAQ</a>
+      </div>
+
+      <div class="navbar__actions">
+        <div class="navbar__progress-mini">
+          <span>📊</span>
+          <div class="progress-bar">
+            <div class="progress-bar__fill navbar__progress-fill" style="width: 0%"></div>
+          </div>
+          <span class="navbar__progress-text">0%</span>
+        </div>
+        <a href="cours.html" class="btn btn--primary btn--sm">Commencer</a>
+        <div class="navbar__burger" id="nav-burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__particles">
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+      </div>
+      <div class="hero__grid-lines"></div>
+    </div>
+
+    <div class="hero__atom">
+      <div class="hero__atom-electron"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Plateforme 100% gratuite & open-source
+      </div>
+
+      <h1 class="hero__title">
+        Maîtrisez la <span class="text-gradient hero__title-highlight">Physique Moderne</span><br>
+        à votre rythme
+      </h1>
+
+      <p class="hero__description">
+        Des cours structurés, des formules claires et des exercices interactifs corrigés — 
+        de la mécanique classique à la physique quantique. Basé sur OpenStax University Physics.
+      </p>
+
+      <div class="hero__cta">
+        <a href="cours.html" class="btn btn--primary btn--lg">
+          🚀 Explorer les cours
+        </a>
+        <a href="#domaines" class="btn btn--secondary btn--lg">
+          📋 Voir les domaines
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-value" id="stat-chapters">18</div>
+          <div class="hero__stat-label">Chapitres</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">5</div>
+          <div class="hero__stat-label">Domaines</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">90+</div>
+          <div class="hero__stat-label">Questions</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">∞</div>
+          <div class="hero__stat-label">Passion</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DOMAINS ═══════════ -->
+  <section class="domains" id="domaines">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">📚 Domaines</span>
+        <h2 class="section-title">Explorez les grands domaines de la physique</h2>
+        <p class="section-subtitle">
+          Chaque domaine contient des cours détaillés et des exercices interactifs pour consolider vos connaissances.
+        </p>
+      </div>
+
+      <div class="domains__grid stagger" id="domains-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURES ═══════════ -->
+  <section class="features reveal" id="features">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">✨ Pourquoi Enack Academy ?</span>
+        <h2 class="section-title">Une approche moderne de l'apprentissage</h2>
+        <p class="section-subtitle">
+          Conçue pour rendre la physique accessible, interactive et captivante.
+        </p>
+      </div>
+
+      <div class="features__grid">
+        <div class="feature-item reveal">
+          <div class="feature-item__icon">📖</div>
+          <h4 class="feature-item__title">Cours structurés</h4>
+          <p class="feature-item__desc">Des leçons claires et aérées, avec formules, exemples concrets et concepts clés bien identifiés.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-item__icon">⚡</div>
+          <h4 class="feature-item__title">Quiz interactifs</h4>
+          <p class="feature-item__desc">Testez vos connaissances avec des QCM corrigés en temps réel et des explications détaillées.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-item__icon">📊</div>
+          <h4 class="feature-item__title">Suivi de progression</h4>
+          <p class="feature-item__desc">Votre avancement est sauvegardé automatiquement. Reprenez exactement là où vous vous êtes arrêté.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-item__icon">📱</div>
+          <h4 class="feature-item__title">100% Responsive</h4>
+          <p class="feature-item__desc">Étudiez sur mobile, tablette ou desktop — l'expérience est optimisée partout.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-item__icon">🎓</div>
+          <h4 class="feature-item__title">Contenu universitaire</h4>
+          <p class="feature-item__desc">Basé sur OpenStax University Physics, un manuel de référence reconnu mondialement.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-item__icon">🌙</div>
+          <h4 class="feature-item__title">Mode sombre natif</h4>
+          <p class="feature-item__desc">Interface sombre élégante, conçue pour réduire la fatigue oculaire lors des longues sessions d'étude.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">❓ FAQ</span>
+        <h2 class="section-title">Questions fréquentes</h2>
+        <p class="section-subtitle">Tout ce que vous devez savoir pour bien démarrer.</p>
+      </div>
+
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question">
+            À qui s'adresse Enack Academy ?
+            <span class="faq__question-icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-content">
+              Enack Academy s'adresse aux étudiants en licence de physique, en classes préparatoires, en écoles d'ingénieurs, ou à toute personne curieuse souhaitant comprendre la physique moderne de manière rigoureuse mais accessible.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Les cours sont-ils gratuits ?
+            <span class="faq__question-icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-content">
+              Oui, 100% gratuits ! Notre contenu est basé sur OpenStax University Physics, une ressource éducative libre (OER). Enack Academy est un projet éducatif à but non lucratif.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Ma progression est-elle sauvegardée ?
+            <span class="faq__question-icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-content">
+              Oui ! Votre progression (leçons complétées, scores aux quiz) est automatiquement sauvegardée dans le navigateur via localStorage. Aucune inscription nécessaire.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Comment sont organisés les cours ?
+            <span class="faq__question-icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-content">
+              Chaque domaine (Mécanique, Thermodynamique, etc.) contient plusieurs chapitres. Chaque chapitre a deux onglets : « Apprentissage » pour la théorie (formules, exemples, concepts clés) et « Exercices » pour la pratique (QCM corrigés instantanément).
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Puis-je contribuer au projet ?
+            <span class="faq__question-icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-content">
+              Absolument ! Enack Academy est un projet open-source. Vous pouvez contribuer en proposant de nouveaux chapitres, en corrigeant des erreurs ou en améliorant l'interface. Contactez-nous via GitHub.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">
+          © 2026 Enack Academy — Propulsé par la curiosité. Contenu basé sur <a href="https://openstax.org" target="_blank" rel="noopener">OpenStax</a>.
+        </div>
+        <div class="footer__links">
+          <a href="cours.html" class="footer__link">Cours</a>
+          <a href="#faq" class="footer__link">FAQ</a>
+          <a href="https://openstax.org/books/university-physics-volume-1/pages/1-introduction" target="_blank" rel="noopener" class="footer__link">OpenStax Vol.1</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/courseData.js"></script>
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script>
+    // Populate domains grid on homepage
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('domains-grid');
+      if (!grid) return;
+
+      const domains = CourseData.getDomains();
+      domains.forEach(domain => {
+        const chapCount = domain.chapters.length;
+        const progress = Progress.getDomainProgress(domain.id);
+
+        const card = document.createElement('a');
+        card.href = `cours.html#${domain.id}`;
+        card.className = 'domain-card reveal';
+        card.dataset.domain = domain.id;
+
+        card.innerHTML = `
+          <div class="domain-card__icon">${domain.icon}</div>
+          <h3 class="domain-card__title">${domain.title}</h3>
+          <p class="domain-card__desc">${domain.description}</p>
+          <div class="domain-card__meta">
+            <span class="domain-card__meta-item">📄 ${chapCount} chapitres</span>
+            <span class="domain-card__meta-item">⚡ ${chapCount * 3}+ exercices</span>
+          </div>
+          <div class="domain-card__progress">
+            <div class="domain-card__progress-label">
+              <span>Progression</span>
+              <span class="domain-card__progress-percent">${progress}%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" style="width: ${progress}%"></div>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      // Re-init scroll reveal for dynamic elements
+      const reveals = document.querySelectorAll('.reveal:not(.reveal--visible)');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>

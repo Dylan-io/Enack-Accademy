@@ -1,0 +1,177 @@
+/* ============================================
+   ENACK ACADEMY — Design Tokens & Variables
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ── Primary Palette ── */
+  --clr-primary-50:  #eef2ff;
+  --clr-primary-100: #dbe4ff;
+  --clr-primary-200: #bfcfff;
+  --clr-primary-300: #93b0ff;
+  --clr-primary-400: #6088fc;
+  --clr-primary-500: #3b63f7;
+  --clr-primary-600: #2544ec;
+  --clr-primary-700: #1d34d9;
+  --clr-primary-800: #1e2cb0;
+  --clr-primary-900: #1e2a8b;
+
+  /* ── Accent (Cyan / Quantum Glow) ── */
+  --clr-accent-50:  #ecfeff;
+  --clr-accent-100: #cffafe;
+  --clr-accent-200: #a5f3fc;
+  --clr-accent-300: #67e8f9;
+  --clr-accent-400: #22d3ee;
+  --clr-accent-500: #06b6d4;
+  --clr-accent-600: #0891b2;
+  --clr-accent-700: #0e7490;
+
+  /* ── Success / Correct ── */
+  --clr-success-50:  #ecfdf5;
+  --clr-success-100: #d1fae5;
+  --clr-success-400: #34d399;
+  --clr-success-500: #10b981;
+  --clr-success-600: #059669;
+
+  /* ── Error / Incorrect ── */
+  --clr-error-50:  #fef2f2;
+  --clr-error-100: #fee2e2;
+  --clr-error-400: #f87171;
+  --clr-error-500: #ef4444;
+  --clr-error-600: #dc2626;
+
+  /* ── Warning / Hint ── */
+  --clr-warning-50:  #fffbeb;
+  --clr-warning-100: #fef3c7;
+  --clr-warning-400: #fbbf24;
+  --clr-warning-500: #f59e0b;
+
+  /* ── Neutral / Surface (Dark Theme) ── */
+  --clr-bg-deepest:  #04060e;
+  --clr-bg-deep:     #080c1a;
+  --clr-bg-base:     #0c1125;
+  --clr-bg-raised:   #111833;
+  --clr-bg-elevated: #162040;
+  --clr-bg-surface:  #1c2951;
+  --clr-bg-hover:    #243362;
+  --clr-bg-glass:    rgba(12, 17, 37, 0.75);
+  --clr-bg-glass-light: rgba(22, 32, 64, 0.55);
+
+  --clr-border:       rgba(99, 130, 255, 0.12);
+  --clr-border-light: rgba(99, 130, 255, 0.06);
+  --clr-border-glow:  rgba(59, 99, 247, 0.35);
+
+  /* ── Text ── */
+  --clr-text-primary:    #f0f2ff;
+  --clr-text-secondary:  #a3b1d6;
+  --clr-text-muted:      #6b7ba8;
+  --clr-text-on-primary: #ffffff;
+
+  /* ── Gradients ── */
+  --grad-hero:     linear-gradient(135deg, #0c1125 0%, #111833 40%, #1a1050 100%);
+  --grad-primary:  linear-gradient(135deg, var(--clr-primary-500), var(--clr-accent-500));
+  --grad-card:     linear-gradient(145deg, rgba(22, 32, 64, 0.6), rgba(12, 17, 37, 0.8));
+  --grad-glow:     radial-gradient(circle at 50% 0%, rgba(59, 99, 247, 0.15), transparent 60%);
+  --grad-text:     linear-gradient(135deg, var(--clr-primary-300), var(--clr-accent-300));
+  --grad-success:  linear-gradient(135deg, var(--clr-success-500), #06d6a0);
+  --grad-error:    linear-gradient(135deg, var(--clr-error-500), #ff6b6b);
+  --grad-warm:     linear-gradient(135deg, #f59e0b, #ef4444);
+  --grad-cosmic:   linear-gradient(135deg, #7c3aed, #2563eb, #06b6d4);
+
+  /* ── Domain Colors ── */
+  --clr-mecanique:      #3b82f6;
+  --clr-mecanique-bg:   rgba(59, 130, 246, 0.1);
+  --clr-thermo:         #f59e0b;
+  --clr-thermo-bg:      rgba(245, 158, 11, 0.1);
+  --clr-electricite:    #8b5cf6;
+  --clr-electricite-bg: rgba(139, 92, 246, 0.1);
+  --clr-optique:        #06b6d4;
+  --clr-optique-bg:     rgba(6, 182, 212, 0.1);
+  --clr-quantique:      #ec4899;
+  --clr-quantique-bg:   rgba(236, 72, 153, 0.1);
+
+  /* ── Typography ── */
+  --ff-heading: 'Space Grotesk', system-ui, sans-serif;
+  --ff-body:    'Inter', system-ui, sans-serif;
+  --ff-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  --fs-xs:   0.75rem;    /* 12px */
+  --fs-sm:   0.875rem;   /* 14px */
+  --fs-base: 1rem;       /* 16px */
+  --fs-md:   1.125rem;   /* 18px */
+  --fs-lg:   1.25rem;    /* 20px */
+  --fs-xl:   1.5rem;     /* 24px */
+  --fs-2xl:  1.875rem;   /* 30px */
+  --fs-3xl:  2.25rem;    /* 36px */
+  --fs-4xl:  3rem;       /* 48px */
+  --fs-5xl:  3.75rem;    /* 60px */
+  --fs-hero: clamp(2.5rem, 5vw + 1rem, 5rem);
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    900;
+
+  --lh-tight:  1.2;
+  --lh-normal: 1.6;
+  --lh-loose:  1.8;
+
+  /* ── Spacing ── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* ── Border Radius ── */
+  --radius-sm:   0.375rem;
+  --radius-md:   0.625rem;
+  --radius-lg:   0.875rem;
+  --radius-xl:   1.25rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md:   0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg:   0 10px 25px rgba(0, 0, 0, 0.4), 0 6px 10px rgba(0, 0, 0, 0.2);
+  --shadow-xl:   0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(59, 99, 247, 0.3), 0 0 60px rgba(59, 99, 247, 0.1);
+  --shadow-glow-accent: 0 0 20px rgba(6, 182, 212, 0.3), 0 0 60px rgba(6, 182, 212, 0.1);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* ── Transitions ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    150ms;
+  --dur-base:    250ms;
+  --dur-slow:    400ms;
+  --dur-slower:  600ms;
+
+  /* ── Z-Index ── */
+  --z-base:     1;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  500;
+  --z-modal:    1000;
+  --z-toast:    2000;
+
+  /* ── Container ── */
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1200px;
+  --container-2xl: 1400px;
+}

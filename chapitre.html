@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chapitre de physique — Cours détaillé et exercices interactifs. Enack Academy.">
+  <meta name="theme-color" content="#0c1125">
+  <title>Chapitre — Enack Academy</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <div class="navbar__logo-icon">⚛️</div>
+        <div class="navbar__logo-text">Enack <span>Academy</span></div>
+      </a>
+
+      <div class="navbar__links" id="nav-links">
+        <a href="index.html" class="navbar__link">Accueil</a>
+        <a href="cours.html" class="navbar__link">Cours</a>
+      </div>
+
+      <div class="navbar__actions">
+        <div class="navbar__progress-mini">
+          <span>📊</span>
+          <div class="progress-bar">
+            <div class="progress-bar__fill navbar__progress-fill" style="width: 0%"></div>
+          </div>
+          <span class="navbar__progress-text">0%</span>
+        </div>
+        <div class="navbar__burger" id="nav-burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ CHAPTER PAGE ═══════════ -->
+  <section class="chapter-page">
+    <div class="container container--narrow">
+
+      <!-- Breadcrumb -->
+      <div class="chapter-page__breadcrumb" id="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <a href="cours.html">Cours</a>
+        <span>›</span>
+        <span id="breadcrumb-domain">—</span>
+        <span>›</span>
+        <span id="breadcrumb-chapter">—</span>
+      </div>
+
+      <!-- Header -->
+      <div class="chapter-page__header" id="chapter-header">
+        <div class="chapter-page__domain-badge" id="domain-badge">
+          <span id="domain-icon"></span>
+          <span id="domain-name"></span>
+        </div>
+        <h1 class="chapter-page__title" id="chapter-title">Chargement...</h1>
+        <p class="chapter-page__subtitle" id="chapter-subtitle"></p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="chapter-tabs">
+        <button class="chapter-tab chapter-tab--active" data-tab="tab-learning">
+          <span class="chapter-tab__icon">📖</span>
+          Apprentissage
+        </button>
+        <button class="chapter-tab" data-tab="tab-exercises">
+          <span class="chapter-tab__icon">⚡</span>
+          Exercices
+        </button>
+      </div>
+
+      <!-- ═══ TAB: Learning ═══ -->
+      <div class="tab-content tab-content--active" id="tab-learning">
+        <div class="lesson-content" id="lesson-content">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Mark as complete -->
+        <div class="lesson-complete" id="lesson-complete">
+          <div class="lesson-complete__left">
+            <div class="lesson-complete__check" id="lesson-check" title="Marquer comme terminé">
+              ✓
+            </div>
+            <div class="lesson-complete__text">
+              <h4>Marquer ce chapitre comme terminé</h4>
+              <p>Cliquez pour suivre votre progression</p>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--sm" onclick="document.querySelector('[data-tab=\'tab-exercises\']').click()">
+            Passer aux exercices →
+          </button>
+        </div>
+      </div>
+
+      <!-- ═══ TAB: Exercises ═══ -->
+      <div class="tab-content" id="tab-exercises">
+        <div class="quiz-container" id="quiz-container">
+          <!-- Quiz Header -->
+          <div class="quiz-header">
+            <div class="quiz-header__info">
+              <h3>🧪 Exercices interactifs</h3>
+              <p>Répondez aux questions pour tester vos connaissances</p>
+            </div>
+            <div class="quiz-header__score">
+              <div>
+                <div class="quiz-header__score-value">0/0</div>
+                <div class="quiz-header__score-label">Score</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Questions rendered here -->
+          <div id="quiz-questions"></div>
+
+          <!-- Results -->
+          <div class="quiz-results" id="quiz-results"></div>
+        </div>
+      </div>
+
+      <!-- Chapter Navigation -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--sp-10); padding-top: var(--sp-8); border-top: 1px solid var(--clr-border);">
+        <a href="#" class="btn btn--secondary" id="prev-chapter" style="display: none;">
+          ← Précédent
+        </a>
+        <div style="flex: 1;"></div>
+        <a href="#" class="btn btn--primary" id="next-chapter" style="display: none;">
+          Suivant →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">
+          © 2026 Enack Academy — Contenu basé sur <a href="https://openstax.org" target="_blank" rel="noopener">OpenStax</a>.
+        </div>
+        <div class="footer__links">
+          <a href="index.html" class="footer__link">Accueil</a>
+          <a href="cours.html" class="footer__link">Cours</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/courseData.js"></script>
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ── Get chapter ID from URL ──
+      const params = new URLSearchParams(window.location.search);
+      const chapterId = params.get('id');
+
+      if (!chapterId) {
+        window.location.href = 'cours.html';
+        return;
+      }
+
+      const chapter = CourseData.getChapter(chapterId);
+      if (!chapter) {
+        window.location.href = 'cours.html';
+        return;
+      }
+
+      const domain = chapter.domain;
+
+      // ── Update page title ──
+      document.title = `${chapter.title} — Enack Academy`;
+
+      // ── Update breadcrumb ──
+      document.getElementById('breadcrumb-domain').textContent = domain.title;
+      const breadcrumbDomainLink = document.createElement('a');
+      breadcrumbDomainLink.href = `cours.html#${domain.id}`;
+      breadcrumbDomainLink.textContent = domain.title;
+      const domainSpan = document.getElementById('breadcrumb-domain');
+      domainSpan.parentNode.replaceChild(breadcrumbDomainLink, domainSpan);
+
+      document.getElementById('breadcrumb-chapter').textContent = chapter.title;
+
+      // ── Update header ──
+      const badge = document.getElementById('domain-badge');
+      badge.style.background = `${domain.color}15`;
+      badge.style.color = domain.color;
+      badge.style.border = `1px solid ${domain.color}30`;
+      document.getElementById('domain-icon').textContent = domain.icon;
+      document.getElementById('domain-name').textContent = domain.title;
+
+      document.getElementById('chapter-title').textContent = chapter.title;
+      document.getElementById('chapter-subtitle').textContent = chapter.description;
+
+      // ── Render lesson content ──
+      const lessonContainer = document.getElementById('lesson-content');
+      if (chapter.lesson && chapter.lesson.sections) {
+        chapter.lesson.sections.forEach((section, index) => {
+          const sectionEl = document.createElement('div');
+          sectionEl.className = 'lesson-section';
+          sectionEl.innerHTML = `
+            <h3 class="lesson-section__title">
+              <span class="lesson-section__title-number" style="background: linear-gradient(135deg, ${domain.color}, ${domain.color}cc);">
+                ${index + 1}
+              </span>
+              ${section.title}
+            </h3>
+            ${section.content}
+          `;
+          lessonContainer.appendChild(sectionEl);
+        });
+      }
+
+      // ── Lesson completion check ──
+      const checkBtn = document.getElementById('lesson-check');
+      const isComplete = Progress.isLessonComplete(chapterId);
+      if (isComplete) {
+        checkBtn.classList.add('lesson-complete__check--done');
+      }
+
+      checkBtn.addEventListener('click', () => {
+        Progress.toggleLesson(chapterId);
+        checkBtn.classList.toggle('lesson-complete__check--done');
+
+        // Update nav progress
+        Navigation.updateNavProgress();
+
+        // Visual feedback
+        if (checkBtn.classList.contains('lesson-complete__check--done')) {
+          checkBtn.style.transform = 'scale(1.2)';
+          setTimeout(() => { checkBtn.style.transform = ''; }, 200);
+        }
+      });
+
+      // ── Initialize quiz ──
+      Quiz.init(chapterId);
+
+      // ── Chapter navigation (prev/next) ──
+      const allChapters = CourseData.getAllChapterIds();
+      const currentIndex = allChapters.indexOf(chapterId);
+
+      if (currentIndex > 0) {
+        const prevBtn = document.getElementById('prev-chapter');
+        const prevChapter = CourseData.getChapter(allChapters[currentIndex - 1]);
+        prevBtn.href = `chapitre.html?id=${allChapters[currentIndex - 1]}`;
+        prevBtn.textContent = `← ${prevChapter.title}`;
+        prevBtn.style.display = '';
+      }
+
+      if (currentIndex < allChapters.length - 1) {
+        const nextBtn = document.getElementById('next-chapter');
+        const nextChapter = CourseData.getChapter(allChapters[currentIndex + 1]);
+        nextBtn.href = `chapitre.html?id=${allChapters[currentIndex + 1]}`;
+        nextBtn.textContent = `${nextChapter.title} →`;
+        nextBtn.style.display = '';
+      }
+
+      // ── Scroll to top ──
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+</body>
+</html>
